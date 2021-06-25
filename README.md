@@ -21,6 +21,21 @@ Then clone the repository.
 git clone https://github.com/zlj-zz/minimycobotflasher.git
 ```
 
+### Permissions
+
+If you need to communicate with your device, please ensure that you have the
+correct permissions. For example, on Ubuntu Linux, you must ensure that your
+user is part of the `dialout` group. e.g.: <br/>
+<https://askubuntu.com/questions/133235/how-do-i-allow-non-root-access-to-ttyusb0> <br/>
+Note that it will be easiest to log out of your current session and log back in
+(see [this post](https://superuser.com/questions/272061/reload-a-linux-users-group-assignments-without-logging-out)
+for more information). You can the check that your current shell session has
+your the correct permissions by checking for `dialout` in a command like this:
+```sh
+$ id
+uid=1001(myuser) gid=1002(myuser) groups=1002(myuser),20(dialout),27(sudo)
+```
+
 ### Setup Virtual Environment
 
 ```bash
